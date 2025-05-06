@@ -17,7 +17,7 @@ Give advanced insights and improvement suggestions.
 """
     headers = {
         "Authorization": f"Bearer {os.getenv('OPENROUTER_API_KEY')}",
-        "HTTP-Referer": "https://your-app-name.onrender.com",
+        "HTTP-Referer": "https://campaign-analysis-f8e1.onrender.com",
         "Content-Type": "application/json"
     }
     payload = {
