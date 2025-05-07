@@ -60,3 +60,17 @@ async def ask_question(request: Request):
             content={"error": str(e), "details": traceback.format_exc()},
             status_code=500
         )
+
+from llm_router import continue_chat
+
+@app.post("/ask")
+async def ask_follow_up(file: UploadFile = File(...), question: str = ""):
+    try:
+        df = pd.read_csv(file.file)
+        response = continue_chat(df, question)
+        return {"response": response}
+    except Exception as e:
+        return JSONResponse(
+            content={"error": str(e), "details": traceback.format_exc()},
+            status_code=500
+        )
