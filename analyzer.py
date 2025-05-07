@@ -46,7 +46,19 @@ def analyze_dataset(df):
         insights.append("No valid campaign column found to display top CTR campaigns.")
 
     return insights, [
-        "Which platform or audience group is converting the best?",
-        "Are there signs of ad fatigue based on date trends?",
-        "What should I do to reduce my CPC or increase ROI?"
+        "What is the best performing campaign?",
+        "Which campaign has the highest click-through rate (CTR)?",
+        "Show campaigns with the lowest conversion rate.",
+        "What is the average cost per click (CPC)?",
+        "Compare performance across platforms.",
+        "Which campaign had the most impressions?",
+        "What is the overall ROI?",
+        "List underperforming campaigns.",
+        "What is the total ad spend?",
+        "Break down performance by device type.",
+        "Which day had the highest engagement?",
+        "Show trends over time.",
+        "What are the top 5 campaigns by revenue?",
+        "Compare engagement between genders (if available).",
+        "Which regions performed best?"
     ]
